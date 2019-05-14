@@ -6,8 +6,7 @@
  * @package  Laravel
  * @author   Taylor Otwell <taylor@laravel.com>
  */
-
-die($_SERVER['REQUEST_URI']);
+ 
 define('LARAVEL_START', microtime(true));
 
 /*

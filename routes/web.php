@@ -15,12 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+/* Prueba para git*/
 Route::get('/usuarios/{user}', function() {
 
 return view('usuarios');
 
 });
-
 
 Route::get('/reportes', function() {
   return view('reportes');

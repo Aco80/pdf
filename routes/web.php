@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/test', function () {
+    return "Esto es un test";
+});
+
 Route::get('/usuarios/{user}', function() {
 
 return view('usuarios');

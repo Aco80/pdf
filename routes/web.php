@@ -19,6 +19,11 @@ Route::get('/test', function () {
     return "Esto es un test";
 });
 
+Route::get('/reportes', function(){
+
+  return view('reportes');
+});
+
 Route::get('/usuarios/{user}', function() {
 
 return view('usuarios');

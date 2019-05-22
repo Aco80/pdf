@@ -1,33 +1,19 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
-use App\User;
-use App\Repositories\User\UserRepositories;
 
-class UserController extends Controller
+
+class User2Controller extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-
-     Protected $Users;
-
-     public function __construct(UserRepositories $Users){
-
-       $this->Users = $Users;
-     }
-
     public function index()
     {
-      $WhereTerms = [
-        ['profesion_id','1']
-      ];
-
-      return view('reportes',['Users'=>$this->Users->GetUserWhere($WhereTerms)]);
+        return view('usuarios');
     }
 
     /**
@@ -59,7 +45,7 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+        return "Muestro el usuario $id  " ;
     }
 
     /**
@@ -93,6 +79,8 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+    return "Borro el usuario $id  " ;
+
+
     }
 }

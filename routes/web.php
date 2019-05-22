@@ -15,21 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/test', function () {
-    return "Esto es un test";
-});
+Route::get('/test', 'DatatablesController@UserData');
 
-Route::get('/reportes', function(){
+Route::get('/reportes', 'UserController@index' );
 
-  return view('reportes');
-});
 
-Route::get('/usuarios/{user}', function() {
-
-return view('usuarios');
-
-});
-
-Route::get('/reportes', function() {
-  return view('reportes');
-});
+Route::resource('/user2', 'User2Controller');
